@@ -1,0 +1,28 @@
+{
+  "root": "apps/supabase-chat-server-e2e",
+  "sourceRoot": "apps/supabase-chat-server-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/supabase-chat-server-e2e/cypress.json",
+        "devServerTarget": "supabase-chat-server:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "supabase-chat-server:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/supabase-chat-server-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["supabase-chat-server"]
+}

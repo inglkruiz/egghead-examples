@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "supabase-chat-server": "apps/supabase-chat-server",
+    "supabase-chat-server-e2e": "apps/supabase-chat-server-e2e"
+  }
+}
