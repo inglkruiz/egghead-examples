@@ -23,6 +23,6 @@
       }
     }
   },
-  "tags": [],
+  "tags": ["supabase-chat-server:e2e"],
   "implicitDependencies": ["supabase-chat-server"]
 }

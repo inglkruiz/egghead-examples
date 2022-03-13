@@ -1,18 +1,33 @@
+import { ChakraProvider } from '@chakra-ui/react';
+import {
+  useSupabase,
+  UseSupabaseHook,
+} from '@egghead-examples/supabase-chat-server/utils';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
 
-function CustomApp({ Component, pageProps }: AppProps) {
+type SupabaseChatProps = AppProps<UseSupabaseHook>;
+
+function SupabaseChat({ Component, pageProps }: SupabaseChatProps) {
+  const { session, supabase, currentUser } = useSupabase();
+
   return (
     <>
       <Head>
-        <title>Welcome to supabase-chat-server!</title>
+        <title>Supabase Chat App</title>
       </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
+      <ChakraProvider>
+        <main>
+          <Component
+            session={session}
+            supabase={supabase}
+            currentUser={currentUser}
+            {...pageProps}
+          />
+        </main>
+      </ChakraProvider>
     </>
   );
 }
 
-export default CustomApp;
+export default SupabaseChat;

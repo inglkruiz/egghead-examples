@@ -19,7 +19,8 @@
       "executor": "@nrwl/next:server",
       "options": {
         "buildTarget": "supabase-chat-server:build",
-        "dev": true
+        "dev": true,
+        "port": 3000
       },
       "configurations": {
         "production": {
@@ -50,5 +51,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["supabase-chat-server"]
 }

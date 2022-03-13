@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "supabase-chat-server": "apps/supabase-chat-server",
-    "supabase-chat-server-e2e": "apps/supabase-chat-server-e2e"
+    "supabase-chat-server-e2e": "apps/supabase-chat-server-e2e",
+    "supabase-chat-server-types": "libs/supabase-chat-server/types",
+    "supabase-chat-server-utils": "libs/supabase-chat-server/utils"
   }
 }

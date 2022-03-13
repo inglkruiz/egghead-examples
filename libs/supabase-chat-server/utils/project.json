@@ -1,0 +1,25 @@
+{
+  "root": "libs/supabase-chat-server/utils",
+  "sourceRoot": "libs/supabase-chat-server/utils/src",
+  "projectType": "library",
+  "tags": ["supabase-chat-server:utils"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/supabase-chat-server/utils/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/supabase-chat-server/utils"],
+      "options": {
+        "jestConfig": "libs/supabase-chat-server/utils/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

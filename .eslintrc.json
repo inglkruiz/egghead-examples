@@ -15,6 +15,10 @@
               {
                 "sourceTag": "*",
                 "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "supabase-chat-server",
+                "onlyDependOnLibsWithTags": ["supabase-chat-server", "supabase-chat-server:utils", "supabase-chat-server:types"]
               }
             ]
           }

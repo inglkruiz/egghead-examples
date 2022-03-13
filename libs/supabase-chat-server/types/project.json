@@ -1,0 +1,32 @@
+{
+  "root": "libs/supabase-chat-server/types",
+  "sourceRoot": "libs/supabase-chat-server/types/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/supabase-chat-server/types",
+        "main": "libs/supabase-chat-server/types/src/index.ts",
+        "tsConfig": "libs/supabase-chat-server/types/tsconfig.lib.json",
+        "assets": ["libs/supabase-chat-server/types/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/supabase-chat-server/types/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/supabase-chat-server/types"],
+      "options": {
+        "jestConfig": "libs/supabase-chat-server/types/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["supabase-chat-server:types"]
+}

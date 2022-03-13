@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@egghead-examples/supabase-chat-server/types": [
+        "libs/supabase-chat-server/types/src/index.ts"
+      ],
+      "@egghead-examples/supabase-chat-server/utils": [
+        "libs/supabase-chat-server/utils/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
