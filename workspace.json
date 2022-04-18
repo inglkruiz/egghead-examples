@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "ecommerce-graphcms": "apps/ecommerce-graphcms",
+    "ecommerce-graphcms-e2e": "apps/ecommerce-graphcms-e2e",
     "supabase-chat-server": "apps/supabase-chat-server",
     "supabase-chat-server-e2e": "apps/supabase-chat-server-e2e",
     "supabase-chat-server-types": "libs/supabase-chat-server/types",

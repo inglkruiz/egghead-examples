@@ -20,6 +20,24 @@
       ],
       "@egghead-examples/supabase-chat-server/utils": [
         "libs/supabase-chat-server/utils/src/index.ts"
+      ],
+      "@components/*": [
+        "apps/ecommerce-graphcms/components/*"
+      ],
+      "@data/*": [
+        "apps/ecommerce-graphcms/data/*"
+      ],
+      "@hooks/*": [
+        "apps/ecommerce-graphcms/hooks/*"
+      ],
+      "@lib/*": [
+        "apps/ecommerce-graphcms/lib/*"
+      ],
+      "@styles/*": [
+        "apps/ecommerce-graphcms/styles/*"
+      ],
+      "@util/*": [
+        "apps/ecommerce-graphcms/util/*"
       ]
     }
   },

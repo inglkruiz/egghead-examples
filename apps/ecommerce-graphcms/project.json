@@ -1,0 +1,54 @@
+{
+  "root": "apps/ecommerce-graphcms",
+  "sourceRoot": "apps/ecommerce-graphcms",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/ecommerce-graphcms",
+        "outputPath": "dist/apps/ecommerce-graphcms"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "ecommerce-graphcms:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "ecommerce-graphcms:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "ecommerce-graphcms:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/ecommerce-graphcms"],
+      "options": {
+        "jestConfig": "apps/ecommerce-graphcms/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ecommerce-graphcms/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
